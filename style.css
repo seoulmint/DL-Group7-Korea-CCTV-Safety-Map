@@ -2,7 +2,6 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    /* overflow: hidden; */ /* Remove overflow hidden to allow body scroll if content exceeds viewport */
 }
 
 body {
@@ -11,7 +10,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #f4f7f6;
-    overflow-y: auto; /* Allow body to scroll if content is too large vertically */
+    overflow: hidden; /* Prevent overall window scrolling */
     padding: 10px; /* Add padding to body for overall spacing */
 }
 
@@ -25,14 +24,13 @@ h1 {
 #main-container {
     display: flex;
     width: 100%;
-    max-width: 1800px; /* Adjust as needed for wider map */
-    height: calc(100vh - 80px); /* Revert to a fixed height for map size control */
+    max-width: 1800px;
+    flex-grow: 1; /* Allow main-container to take all remaining vertical space */
     gap: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    overflow: hidden;
-    flex-grow: 1;
+    overflow: hidden; /* Prevent #main-container content from causing scroll */
 }
 
 #left-panel {
@@ -44,7 +42,7 @@ h1 {
     gap: 20px;
     overflow-y: auto; /* Make the entire left-panel scrollable */
     height: 100%;
-    padding-bottom: 50px; /* Add extra padding for scroll comfort */
+    padding-bottom: 70px; /* Increased padding for more scroll comfort */
 }
 
 #description-section {
