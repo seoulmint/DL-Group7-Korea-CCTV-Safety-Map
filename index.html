@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[DL-Group7] 대한민국 CCTV 안전 지도</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>[DL-Group7] 대한민국 CCTV 안전 지도</h1>
+    <div id="main-container">
+        <div id="left-panel">
+            <div id="description-section">
+                <h2>안전지도 설명</h2>
+                <p>
+                    이 지도는 대한민국의 인구수 데이터와 CCTV 수 데이터를 활용하여 제작되었습니다.
+                    각 지표의 의미는 다음과 같습니다:
+                </p>
+                <ul>
+                    <li><b>안전도 순위 (종합):</b> 인구수당 CCTV 수를 기준으로 순위를 매긴 것입니다.</li>
+                    <li><b>안전도 분석 (단순비율/편차):</b> 중앙값을 기준으로 그 비율에 따라 값을 표기합니다.</li>
+                    <li><b>안전도 분석 (로그비율/편차):</b> 인구수가 많을 때 비율 감소를 보정하기 위해 인구수와 CCTV 수에 로그 스케일을 적용했습니다.</li>
+                    <li><b>CCTV 분포 (절대수):</b> 지역별 CCTV의 절대적인 분포를 그라데이션으로 보여줍니다.</li>
+                    <li><b>인구분포 (절대수):</b> 지역별 인구수의 절대적인 분포를 그라데이션으로 보여줍니다.</li>
+                    <li><b>통계 텍스트:</b> 각 그리드의 인구수와 CCTV 수를 보여줍니다.</li>
+                </ul>
+                <p><strong>그리드 크기는 사각 그리드의 한 변의 길이를 의미합니다.</strong></p>
+            </div>
+            <div id="button-area"></div>
+        </div>
+        <div id="map-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
